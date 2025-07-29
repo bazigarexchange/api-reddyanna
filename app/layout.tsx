@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "api-reddyanna.co.in",
-  description: "api-reddyanna.co.in",
+  title: "Join India’s Favorite Gaming Community",
+  description: "Join a vibrant platform for daily sports-based gaming fun.",
 };
 
 export default function RootLayout({
