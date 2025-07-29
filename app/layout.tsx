@@ -29,17 +29,24 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
 
-    {/* Google Ads (Global Site Tag - gtag.js) */}
+      {/* Google Ads Global Site Tag (gtag.js) */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-17394843260"
         strategy="afterInteractive"
       />
-      <Script id="google-ads" strategy="afterInteractive">
+      <Script id="google-ads-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'AW-17394843260');
+          
+          // Conversion event fires on page load
+          gtag('event', 'conversion', {
+              'send_to': 'AW-17394843260/sliXCIfFlvsaEPz8wOZA',
+              'value': 1.0,
+              'currency': 'USD'
+          });
         `}
       </Script>
 
